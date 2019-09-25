@@ -2,12 +2,16 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportHome from '../../../app/controller/home';
+import ExportBehavior from '../../../app/controller/behavior';
+import ExportBook from '../../../app/controller/book';
 import ExportLogin from '../../../app/controller/login';
+import ExportTag from '../../../app/controller/tag';
 
 declare module 'egg' {
   interface IController {
-    home: ExportHome;
+    behavior: ExportBehavior;
+    book: ExportBook;
     login: ExportLogin;
+    tag: ExportTag;
   }
 }

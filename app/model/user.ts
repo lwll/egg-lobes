@@ -29,11 +29,16 @@ export default (app: Application) => {
             type: STRING(128),
             defaultValue: 'http://localhost:88/image/icon-boy.png',
         },
-        created_at: DATE,
-        updated_at: DATE,
+        signature: {
+            type: STRING(18),
+            defaultValue: '何妨吟啸且徐行',
+        },
+        createdAt: DATE,
+        updatedAt: DATE,
     });
 
     return class extends User {
         password: string;
+        id: string;
     };
 };

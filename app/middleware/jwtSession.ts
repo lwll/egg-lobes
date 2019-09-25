@@ -19,7 +19,8 @@ export default () => {
                 ctx.jwtSession = sessionInfo;
                 await next();
             }
+        } else {
+            throw new StatusError('请先登录！', StatusError.ERROR_STATUS.SESSION_EXPIRED);
         }
-        throw new StatusError('请先登录！', StatusError.ERROR_STATUS.SESSION_EXPIRED);
     };
 };
